@@ -67,3 +67,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+from course import Course
+c = Course("X"); c.add_student("Ali",88)
+c.remove_student("Ali")
+print(len(c))
+try:
+    c.remove_student("Zara")
+except KeyError as e:
+     print ("KeyError:",e)
